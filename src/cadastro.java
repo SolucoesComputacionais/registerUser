@@ -54,10 +54,14 @@ public class cadastro {
 
         Pessoa pessoa = new Pessoa(nome, idade, cidade);
 
+        
         try {
+
+            
 
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3300/usuariodb", "root",
                     "root");
+                    
 
             String sql = "INSERT INTO user (nome, idade, cidade) VALUES (?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
